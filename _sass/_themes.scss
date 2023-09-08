@@ -18,6 +18,8 @@
   --global-card-bg-color: #{$white-color};
 
   --calendar-button-file: url(/assets/img/combined_v22.png);
+  --global-lightmode-img-visibility: visible;
+  --global-darkmode-img-visibility: hidden;
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -65,6 +67,8 @@ html[data-theme='dark'] {
   --global-card-bg-color: #{$grey-900};
 
   --calendar-button-file: url(/assets/img/combined_v22_dark.png);
+  --global-lightmode-img-visibility: hidden;
+  --global-darkmode-img-visibility: visible;
   
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;

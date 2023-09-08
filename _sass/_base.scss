@@ -1021,6 +1021,15 @@ nav[data-toggle="toc"] {
   }
 }
 
+.lightmode-img{
+    position: relative;
+    visibility: var(--global-lightmode-img-visibility);
+}
+.darkmode-img{
+    position: absolute;
+    visibility: var(--global-darkmode-img-visibility);
+}
+
 /* small screens */
 @media (max-width: 576px) {
   /* override stickyness so that the navigation does not follow scrolling */
