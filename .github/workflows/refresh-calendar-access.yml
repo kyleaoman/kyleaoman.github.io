@@ -6,6 +6,9 @@ on:
 jobs:
   refresh-calendar-access:
     runs-on: ubuntu-latest
+    env: 
+      CI_COMMIT_MESSAGE: Update calendar embedding info.
+      CI_COMMIT_AUTHOR: Calendar Bot
     steps:
     - uses: 'actions/checkout@v4'
     - uses: 'actions/setup-python@v4'
@@ -14,4 +17,7 @@ jobs:
     - name: 'Refresh calendar access'
     - run: |
         python refresh_calendar.py
-	git config --global user.name 'CalendarBot' && git config --global user.email 'kyleaomanusers.noreply.github.com' && git commit -a -m 'Refresh calendar embedding info.' && git push
+        git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+        git config --global user.email "kyleaoman@users.noreply.github.com"
+        git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+        git push
