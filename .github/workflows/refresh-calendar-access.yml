@@ -25,6 +25,7 @@ jobs:
       uses: 'google-github-actions/setup-gcloud@v2'
       
     - run: |
+        ls /home/runner/work/kyleaoman.github.io/kyleaoman.github.io/
         python -m pip install --upgrade pip
         python -m pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
         python refresh_calendar.py
