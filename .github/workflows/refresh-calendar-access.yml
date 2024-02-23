@@ -14,7 +14,4 @@ jobs:
     - name: 'Refresh calendar access'
     - run: |
         python refresh_calendar.py
-	git config --global user.name "CalendarBot"
-	git config --global user.email "kyleaoman@users.noreply.github.com"
-	git commit -a -m "Refresh calendar embedding info."
-	git push
+	git config --global user.name 'CalendarBot' && git config --global user.email 'kyleaomanusers.noreply.github.com' && git commit -a -m 'Refresh calendar embedding info.' && git push
