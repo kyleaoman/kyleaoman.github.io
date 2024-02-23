@@ -2,7 +2,6 @@
 
 import datetime
 import os.path
-import sys
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -12,7 +11,14 @@ from googleapiclient.errors import HttpError
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"]
-token_file = sys.argv[1]
+
+import glob
+
+json_files = glob.glob(
+    "/home/runner/work/kyleaoman.github.io/kyleaoman.github.io/*.json"
+)
+assert len(json_files) == 1
+token_file = json_files[0]
 print(f"TOKEN FILE: {token_file}")
 
 
