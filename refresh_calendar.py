@@ -13,6 +13,7 @@ SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"]
 import sys
 
 google_auth_token_file = sys.argv[1]
+print(f"google_auth_token_file {google_auth_token_file}")
 
 
 def main():
