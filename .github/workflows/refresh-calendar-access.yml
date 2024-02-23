@@ -16,6 +16,8 @@ jobs:
         python-version: '3.11'
     - name: 'Refresh calendar access'
       run: |
+        pip install --upgrade pip
+        pip install --upgrade requests
         python refresh_calendar.py
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "kyleaoman@users.noreply.github.com"
