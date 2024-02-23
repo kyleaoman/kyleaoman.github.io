@@ -1,6 +1,8 @@
 name: refresh-calendar-access
 
 on:
+  schedule:
+    - cron: '19 3 * * 0-6'
   workflow_dispatch:
 
 jobs:
