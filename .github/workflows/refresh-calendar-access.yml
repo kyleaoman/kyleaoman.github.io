@@ -4,29 +4,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  gen-auth-token:
+  refresh-calendar-access:
     runs-on: ubuntu-latest
-    permissions:
-      contents: 'read'
-      id-token: 'write'
-
     steps:
     - uses: 'actions/checkout@v4'
     - uses: 'actions/setup-python@v4'
       with:
         python-version: '3.11'
-
-    - id: 'auth'
-      uses: 'google-github-actions/auth@v2'
-      with:
-        project_id: 'website-calendar-415211'
-        workload_identity_provider: 'projects/604298549901/locations/global/workloadIdentityPools/github/providers/kyleaoman-github-io'
-    - name: 'Set up Cloud SDK'
-      uses: 'google-github-actions/setup-gcloud@v2'
-      
+    - name: 'Refresh calendar access'
     - run: |
-        python -m pip install --upgrade pip
-        python -m pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
-        cat $GOOGLE_APPLICATION_CREDENTIALS
-        python refresh_calendar.py $GOOGLE_APPLICATION_CREDENTIALS
-    
+        python refresh_calendar.py
+	git config --global user.name "CalendarBot"
+	git config --global user.email "kyleaoman@users.noreply.github.com"
+	git commit -a -m "Refresh calendar embedding info."
+	git push
