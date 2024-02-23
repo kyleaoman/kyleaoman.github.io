@@ -1,74 +1,35 @@
-import datetime
-import os.path
+import requests
 
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
+user_agent = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0)"
+    " Gecko/20100101 Firefox/54.0"
+}
+url = (
+    "https://calendar.google.com/calendar/"
+    "embed?src=kyleaoman%40gmail.com&ctz=Europe%2FLondon"
+)
 
-# If modifying these scopes, delete the file token.json.
-SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"]
+response = requests.get(url, headers=user_agent)
 
-import sys
+html_source = response.text
+lines = html_source.split("\n")
+for line in lines:
+    if "serverTime" in line:
+        server_time = line.split("=")[1].split(";")[0]
+    if "calendar-web.embed" in line and "stylesheet" not in line:
+        src = line.split("src=")[1].split('"')[1]
 
-google_auth_token_file = sys.argv[1]
-print(f"google_auth_token_file {google_auth_token_file}")
-
-
-def main():
-    """Shows basic usage of the Google Calendar API.
-    Prints the start and name of the next 10 events on the user's calendar.
-    """
-    creds = None
-    creds = Credentials(token=google_auth_token_file)
-    # The file token.json stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
-    # time.
-    # if os.path.exists("token.json"):
-    #     creds = Credentials.from_authorized_user_file("token.json", SCOPES)
-    # # If there are no (valid) credentials available, let the user log in.
-    # if not creds or not creds.valid:
-    #     if creds and creds.expired and creds.refresh_token:
-    #         creds.refresh(Request())
-    #     else:
-    #         flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
-    #         creds = flow.run_local_server(port=0)
-    #     # Save the credentials for the next run
-    #     with open("token.json", "w") as token:
-    #         token.write(creds.to_json())
-
-    try:
-        service = build("calendar", "v3", credentials=creds)
-
-        # Call the Calendar API
-        now = datetime.datetime.utcnow().isoformat() + "Z"  # 'Z' indicates UTC time
-        print("Getting the upcoming 10 events")
-        events_result = (
-            service.events()
-            .list(
-                calendarId="primary",
-                timeMin=now,
-                maxResults=10,
-                singleEvents=True,
-                orderBy="startTime",
-            )
-            .execute()
+mod_file = "_includes/head.html"
+with open(mod_file, "r") as f:
+    lines = f.readlines()
+for i, line in enumerate(lines):
+    if "serverTime" in line:
+        lines[i] = f"      gcal$perf$serverTime={server_time};\n"
+    if "calendar-web.embed" in line and "stylesheet" not in line:
+        lines[i] = (
+            '    <script type="text/javascript" '
+            f'src="https://calendar.google.com{src}">'
+            "</script>\n"
         )
-        events = events_result.get("items", [])
-
-        if not events:
-            print("No upcoming events found.")
-            return
-
-        # Prints the start and name of the next 10 events
-        for event in events:
-            start = event["start"].get("dateTime", event["start"].get("date"))
-            print(start, event["summary"])
-
-    except HttpError as error:
-        print(f"An error occurred: {error}")
-
-
-if __name__ == "__main__":
-    main()
+with open(mod_file, "w") as f:
+    f.writelines(lines)
