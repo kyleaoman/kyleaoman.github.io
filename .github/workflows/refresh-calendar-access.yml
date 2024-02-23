@@ -19,16 +19,13 @@ jobs:
     - id: 'auth'
       uses: 'google-github-actions/auth@v2'
       with:
-        token_format: 'access_token'
-#        project_id: 'website-calendar-415211'
+        project_id: 'website-calendar-415211'
         workload_identity_provider: 'projects/604298549901/locations/global/workloadIdentityPools/github/providers/kyleaoman-github-io'
-        service_account: 'calendar-service-account@website-calendar-415211.iam.gserviceaccount.com'
-        access_token_lifetime: '300s'
+    - name: 'Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v2'
+      
     - run: |
         python -m pip install --upgrade pip
         python -m pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
-        echo '${{ steps.auth.output.auth_token }}'
-        python refresh_calendar.py '${{ steps.auth.output.auth_token }}'
-#    - run: |-
-#       curl -H 'Bearer: ${{ steps.auth.outputs.auth_token }}' https://calendar.google.com/calendar/embed?src=kyleaoman%40gmail.com&ctz=Europe%2FLondon
+        python refresh_calendar.py
     
