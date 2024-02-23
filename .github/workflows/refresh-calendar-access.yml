@@ -20,5 +20,5 @@ jobs:
         workload_identity_provider: 'projects/604298549901/locations/global/workloadIdentityPools/github/providers/kyleaoman-github-io'
 
     - run: |-
-       curl -H 'Bearer: ${{ steps.auth.outputs.auth_token }}' https://calendar.google.com/calendar/embed?src=kyleaoman%40gmail.com&ctz=Europe%2FLondon"
+       curl -H 'Bearer: ${{ steps.auth.outputs.auth_token }}' https://calendar.google.com/calendar/embed?src=kyleaoman%40gmail.com&ctz=Europe%2FLondon
     
