@@ -15,7 +15,7 @@ jobs:
       with:
         python-version: '3.11'
     - name: 'Refresh calendar access'
-    - run: |
+      run: |
         python refresh_calendar.py
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "kyleaoman@users.noreply.github.com"
