@@ -13,6 +13,7 @@ from googleapiclient.errors import HttpError
 # If modifying these scopes, delete the file token.json.
 SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"]
 token_file = sys.argv[1]
+print(f"TOKEN FILE: {token_file}")
 
 
 def main():
