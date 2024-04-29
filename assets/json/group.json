@@ -1,6 +1,12 @@
 {
     "members":
     {
+	"Diego Dado": {
+            "startdate": "10-2024",
+            "enddate": " ",
+	    "role": "PhD candidate",
+	    "status": "present"
+	},
 	"Kate Harborne": {
 	    "startdate": "02-2025",
             "enddate": " ",
