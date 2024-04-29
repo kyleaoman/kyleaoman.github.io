@@ -1,6 +1,14 @@
 {
     "members":
     {
+	"Kate Harborne": {
+	    "startdate": "02-2025",
+	    "role": "Postdoc",
+	    "url": "https://www.icrar.org/people/kharborne/",
+	    "status": "current",
+	    "img": "kate_harborne.jpg",
+	    "email": "katherine.harborne@uwa.edu.au",
+	}
 	"Mathilda Hunnisett": {
 	    "startdate": "07-2023",
 	    "enddate": "08-2023",
