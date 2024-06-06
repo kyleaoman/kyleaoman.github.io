@@ -1,6 +1,13 @@
 {
     "members":
     {
+	"Mary Carstairs": {
+	    "startdate": "07-2024",
+	    "enddate": "08-2024",
+	    "role": "Summer undergraduate project",
+	    "img": "mary_carstairs.jpg",
+	    "status": "present"
+	},
 	"Diego Dado": {
             "startdate": "10-2024",
             "enddate": " ",
@@ -45,7 +52,7 @@
 	"Eleanor Downing": {
 	    "startdate": "06-2022",
 	    "enddate": "09-2022",
-	    	    "img": "eleanor_downing.jpg",
+	    "img": "eleanor_downing.jpg",
 	    "role": "Summer undergraduate project",
 	    "status": "past"
 	},
