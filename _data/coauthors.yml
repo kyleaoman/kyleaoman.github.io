@@ -81,3 +81,7 @@
 "Swinbank":
   - firstname: ["Mark", "M."]
     url: http://astro.dur.ac.uk/~ams/
+
+"Riley":
+  - firstname: ["Alexander", "Alex", "Alexander H.", "Alex H.", "A. H.", "A."]
+    url: https://ahriley.github.io/
