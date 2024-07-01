@@ -30,8 +30,12 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Assoc. Professor & Royal Society Dorothy Hodgkin Fellow
+      institution: Institute for Computational Cosmology & Centre for Extragalactic Astronomy, Physics, Durham University
+      year: 2023 - present
+
     - title: Asst. Professor & Royal Society Dorothy Hodgkin Fellow
-      institution: Institute for Computational Cosmology, Physics, Durham University
+      institution: Institute for Computational Cosmology & Centre for Extragalactic Astronomy, Physics, Durham University
       year: 2023 - present
 
     - title: Postdoctoral Research Associate

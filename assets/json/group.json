@@ -1,6 +1,18 @@
 {
     "members":
     {
+	"Brad Makinson": {
+	    "startdate": "10-2024",
+	    "enddate": "04-2025",
+	    "role": "MPhys student",
+	    "status": "present"
+	},
+	"Jack Carter": {
+	    "startdate": "10-2024",
+	    "enddate": "04-2025",
+	    "role": "MPhys student",
+	    "status": "present"
+	},
 	"Mary Carstairs": {
 	    "startdate": "07-2024",
 	    "enddate": "08-2024",
