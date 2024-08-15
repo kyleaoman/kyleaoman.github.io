@@ -18,7 +18,13 @@
 	    "enddate": "08-2024",
 	    "role": "Summer undergraduate project",
 	    "img": "mary_carstairs.jpg",
-	    "status": "present"
+	    "status": "past"
+	},
+	"Loretta Lanigan": {
+	    "startdate": "07-2024",
+	    "enddate": "08-2024",
+	    "role": "Summer project",
+	    "status": "past"
 	},
 	"Diego Dado": {
             "startdate": "10-2024",
