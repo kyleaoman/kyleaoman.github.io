@@ -13,19 +13,21 @@ response = requests.get(url, headers=user_agent)
 
 html_source = response.text
 lines = html_source.split("\n")
+# print(lines)
+# server_time = None
 for line in lines:
-    if "serverTime" in line:
-        server_time = line.split("=")[1].split(";")[0]
-    if "calendar-web.embed" in line and "stylesheet" not in line:
+    # if "serverTime" in line:
+    #     server_time = line.split("=")[1].split(";")[0]
+    if "calendar-web" in line and "stylesheet" not in line:
         src = line.split("src=")[1].split('"')[1]
 
 mod_file = "_includes/head.html"
 with open(mod_file, "r") as f:
     lines = f.readlines()
 for i, line in enumerate(lines):
-    if "serverTime" in line:
-        lines[i] = f"      gcal$perf$serverTime={server_time};\n"
-    if "calendar-web.embed" in line and "stylesheet" not in line:
+    # if "serverTime" in line and server_time is not None:
+    #     lines[i] = f"      gcal$perf$serverTime={server_time};\n"
+    if "calendar-web" in line and "stylesheet" not in line:
         lines[i] = (
             '    <script type="text/javascript" '
             f'src="https://calendar.google.com{src}">'
