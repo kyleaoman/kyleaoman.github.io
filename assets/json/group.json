@@ -30,7 +30,8 @@
             "startdate": "10-2024",
             "enddate": " ",
 	    "role": "PhD candidate",
-	    "status": "present"
+	    "status": "present", 
+            "email": "diego.dado2@durham.ac.uk"
 	},
 	"Dr Kate Harborne": {
 	    "startdate": "02-2025",
