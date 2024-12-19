@@ -3,6 +3,7 @@ github_users:
 
 github_repos:
   - kyleaoman/martini
+  - SWIFTSIM/swiftsimio
   - SWIFTSIM/swiftgalaxy
   - kyleaoman/eagleSqlTools
   - kyleaoman/pyread_eagle
