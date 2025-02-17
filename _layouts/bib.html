@@ -191,6 +191,8 @@
 	      {%- capture entrytype -%}{{ "MNRAS" }}{%- endcapture -%}
 	    {%- elsif entry.journal == "\apj" -%}
 	      {%- capture entrytype -%}{{ "ApJ" }}{%- endcapture -%}
+	    {%- elsif entry.journal == "\aj" -%}
+	      {%- capture entrytype -%}{{ "AJ" }}{%- endcapture -%}
 	    {%- elsif entry.journal == "\apjl" -%}
 	      {%- capture entrytype -%}{{ "ApJL" }}{%- endcapture -%}
 	    {%- elsif entry.journal == "\prl" -%}
