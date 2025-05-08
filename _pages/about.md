@@ -15,7 +15,7 @@ profile:
     <p><a href="https://www.dur.ac.uk/">Durham University</a>,</p>
     <p><a href="https://goo.gl/maps/PGAnoTXgreHSPtvy5">Office: OCW222</a></p>
     <p><a href="mailto:kyle.a.oman@durham.ac.uk">kyle.a.oman@durham.ac.uk</a></p>
-    <p><a href="tel:+44191-334-3011">+44 191 3343011</a></p>
+    <p><a href="tel:+44191-334-3011">+44 191 3343348</a></p>
 
 news: false
 latest_posts: false
