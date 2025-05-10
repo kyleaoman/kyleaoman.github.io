@@ -11,7 +11,7 @@ toc: true
 
 ## Rendering hydrodynamical simulations
 
-I've spent part of the past few summers working in collaboration with project students on visualisation pipelines. A lot of this has been built around [py&#8209;sphviewer](https://alejandrobll.github.io/py-sphviewer) that is now deprecated, but most of what we've learned is quite general and I hope to port it over to another visualisation toolkit in the future.
+I've spent part of the past few summers working in collaboration with project students on visualisation pipelines. A lot of this has been built around [py&#8209;sphviewer](https://alejandrobll.github.io/content/py-sphviewer/) that is now deprecated, but most of what we've learned is quite general and I hope to port it over to another visualisation toolkit in the future.
 
 ### Early attempts
 
