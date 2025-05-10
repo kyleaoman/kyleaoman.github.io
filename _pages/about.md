@@ -8,7 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
-  address: >
+  more_info: >
     <p><a href="https://www.icc.dur.ac.uk/">Institute for Computational Cosmology</a></p>
     <p>& <a href="https://www.astro.dur.ac.uk/CEA/">Centre for Extragalactic Astronomy</a>,</p>
     <p><a href="https://www.durham.ac.uk/departments/academic/physics/">Physics Department</a>,</p>
@@ -20,9 +20,9 @@ profile:
 news: false
 latest_posts: false
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: true # includes social icons at the bottom of the page
 ---
 
 I'm an Associate Professor and Royal Society Dorothy Hodgkin fellow at the Institute for Computational Cosmology and the Centre for Extragalactic Astronomy in Durham, UK. In my [main line of research](/projects/dm), I work at the interface of cosmological hydrodynamical galaxy formation simulations and large 21&#8209;cm radio surveys to study the dark matter content and structure of galaxies. I also occasionally work on galaxy formation and evolution (especially of [satellites in groups and clusters](/projects/satellites)), weak gravitational lensing, and Galactic archaeology. I like to do a bit of [data visualisation](/projects/vis) when I can find the time, and try to make useful [contributions](/repositories) to open-source code. I have a public tool for making mock 21&#8209;cm observations of simulated galaxies:
 
-{% include figure.html path="assets/img/martini_banner.png" class="img-fluid rounded" width="65%" href="https://github.com/kyleaoman/martini" %}
+{% include figure.liquid path="assets/img/martini_banner.png" class="img-fluid rounded" width="65%" href="https://github.com/kyleaoman/martini" %}
