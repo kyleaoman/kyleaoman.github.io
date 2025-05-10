@@ -3,9 +3,16 @@
     <li class="list-group-item">
       <div class="row">
         <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
-          {% if content.startdate %} {% assign startdate = content.startdate | split: '-' | join: '.' %} {% else %} {% assign startdate = '' %} {% endif %}
-	  {% if content.enddate %} {% assign enddate = content.enddate | split: "-" | join: "." %} {% else %} {% assign enddate = "" %} {% endif %}
-          <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> {{ startdate }}{% if enddate != "" %}-{{ enddate }}{% endif %} </span>
+          {% if content.startdate %}
+            {% assign startdate = content.startdate | split: '-' | join: '.' %}
+          {% else %}
+            {% assign startdate = '' %}
+          {% endif %}
+          {% if content.enddate %} {% assign enddate = content.enddate | split: '-' | join: '.' %} {% else %} {% assign enddate = '' %} {% endif %}
+          <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
+            {{ startdate -}}
+            {%- if enddate != '' %}-{{ enddate }}{% endif %}
+          </span>
         </div>
         <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
           <h6 class="title font-weight-bold ml-1 ml-md-4">

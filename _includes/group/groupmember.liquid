@@ -1,11 +1,11 @@
-{% if memberdata.img and memberdata.img != "" %}
-  {% assign leftcolclass="col-sm-4" %}
-  {% assign rightcolclass="col-sm-8" %}
+{% if memberdata.img and memberdata.img != '' %}
+  {% assign leftcolclass = 'col-sm-4' %}
+  {% assign rightcolclass = 'col-sm-8' %}
   {% assign member_image_path = memberdata.img | prepend: 'assets/img/' %}
   {% if page.images_circular %}
-    {% assign member_image_class = "img-fluid z-depth-1 rounded-circle" %}
+    {% assign member_image_class = 'img-fluid z-depth-1 rounded-circle' %}
   {% else %}
-    {% assign member_image_class = "img-fluid z-depth-1 rounded" %}
+    {% assign member_image_class = 'img-fluid z-depth-1 rounded' %}
   {% endif %}
   <div class="memberphotoregion">
     <div class="memberpic">
@@ -13,95 +13,105 @@
     </div>
   </div>
 {% else %}
-  {% assign leftcolclass="col-sm-3" %}
-  {% assign rightcolclass="col-sm-9" %}  
+  {% assign leftcolclass = 'col-sm-3' %}
+  {% assign rightcolclass = 'col-sm-9' %}
 {% endif %}
-{% if memberdata.img and memberdata.img != "" %}
-  {% assign imglayout = "col-4 col-sm-4" %}
+{% if memberdata.img and memberdata.img != '' %}
+  {% assign imglayout = 'col-4 col-sm-4' %}
 {% else %}
-  {% assign imglayout = "col-4 col-sm-3" %}
+  {% assign imglayout = 'col-4 col-sm-3' %}
 {% endif %}
 <ul class="card-text font-weight-light list-group list-group-flush">
   <li class="list-group-item">
     <div class="row">
       <div class="{{ imglayout }}">
-	{% if memberdata.startdate %}
-	{% assign startdate = memberdata.startdate | split: "-" | join: "." %}
-	{% else %}
-	{% assign startdate = "" %}
-	{% endif %}
-	{% if memberdata.enddate %}
-	{% assign enddate = memberdata.enddate | split: "-" | join: "." %}
-	{% else %}
-	{% assign enddate = "" %}
-	{% endif %}
-	<span class="badge font-weight-bold danger-color-dark text-uppercase align-top">
-          {{ startdate }}{% if enddate != "" %}-{{ enddate }}{% endif %}
-	</span>
+        {% if memberdata.startdate %}
+          {% assign startdate = memberdata.startdate | split: '-' | join: '.' %}
+        {% else %}
+          {% assign startdate = '' %}
+        {% endif %}
+        {% if memberdata.enddate %}
+          {% assign enddate = memberdata.enddate | split: '-' | join: '.' %}
+        {% else %}
+          {% assign enddate = '' %}
+        {% endif %}
+        <span class="badge font-weight-bold danger-color-dark text-uppercase align-top">
+          {{ startdate -}}
+          {%- if enddate != '' %}-{{ enddate }}{% endif %}
+        </span>
       </div>
       <div class="{{ imglayout }}">
-	<h6 class="" style="font-size: 0.95rem;">
-	{% if memberdata contains "role_url" and memberdata.role_url != "" %}
-	  <a href="{{ memberdata.role_url }}">{{ memberdata.role }}</a>
-	{% else %}
-	  {{ memberdata.role }}
-	{% endif %}
-	</h6>  
+        <h6 class="" style="font-size: 0.95rem;">
+          {% if memberdata contains 'role_url' and memberdata.role_url != '' %}
+            <a href="{{ memberdata.role_url }}">{{ memberdata.role }}</a>
+          {% else %}
+            {{ memberdata.role }}
+          {% endif %}
+        </h6>
       </div>
     </div>
-    {% if memberdata contains "email" and memberdata.email != "" %}
-    <div class="row">
-      <div class={{ leftcolclass }}></div>
-      <div class={{ rightcolclass }}>
-	<h6 class="" style="font-size: 0.95rem;"><nobr><i class="fas fa-envelope"></i>{{ " " }}<a href="mailto:{{ memberdata.email }}" target="_blank">{{ memberdata.email }}</a></nobr></h6>
+    {% if memberdata contains 'email' and memberdata.email != '' %}
+      <div class="row">
+        <div class="{{ leftcolclass }}"></div>
+        <div class="{{ rightcolclass }}">
+          <h6 class="" style="font-size: 0.95rem;">
+            <nobr
+              ><i class="fas fa-envelope"></i>{{ ' ' -}}
+              <a href="mailto:{{ memberdata.email }}" target="_blank">{{ memberdata.email }}</a></nobr
+            >
+          </h6>
+        </div>
       </div>
-    </div>
     {% endif %}
   </li>
-  {% if memberdata contains "degrees" and memberdata.degrees.size > 0 %}
+  {% if memberdata contains 'degrees' and memberdata.degrees.size > 0 %}
     {% for degree in memberdata.degrees %}
       <li class="list-group-item">
         <div class="row">
           {% assign degreetype = degree[0] %}
-	  {% assign degreedata = degree[1] %}
-          <div class={{ leftcolclass }}>
-	    <h6 class="title font-weight-bold">{{ degreetype }}</h6>
+          {% assign degreedata = degree[1] %}
+          <div class="{{ leftcolclass }}">
+            <h6 class="title font-weight-bold">{{ degreetype }}</h6>
           </div>
-          <div class={{ rightcolclass }}>
-	    <h6 class="" style="font-size: 0.95rem;">
-	    {% if degreedata contains "thesis_url" and degreedata.thesis_url != "" %}
-              <a href="{{ degreedata.thesis_url }}">{{ degreedata.thesis }}</a>
-            {% else %}
-              {{ degreedata.thesis }}
-            {% endif %}
-	    <!-- cosupervisors -->  
-	    {% if degreedata contains "cosupervisors" and degreedata.cosupervisors != "" %}
-	      {{ " (co&#8209;supervisor" }}{% if degreedata.cosupervisors contains "," %}s{% endif %}{{ ":" }}
-	      {% assign cosupervisors = degreedata.cosupervisors | split:"," %}
-	      {% for cosupervisor in cosupervisors %}
-	        {% assign coauthor_url = nil %}
-	        {% assign cosupervisor_first_name = cosupervisor | split:" " | first %}
-	        {% assign cosupervisor_last_name = cosupervisor | split:" " | last %}
-	        {% if site.data.coauthors[cosupervisor_last_name] %}
-	          {% for coauthor in site.data.coauthors[cosupervisor_last_name] %}
-                    {% if coauthor.firstname contains cosupervisor_first_name %}
-                      {% assign coauthor_url = coauthor.url %}
-                      {% break %}
-                    {% endif %}
-                  {% endfor %}
-                {% endif %}
-	        {% if coauthor_url %}
-	          <a href="{{ coauthor_url }}">{{ cosupervisor | replace: " ", "&nbsp;" }}</a>{% unless forloop.last %}{{ ", " }}{% else %}){% endunless %}
-	        {% else %}
-                  {{ cosupervisor | replace: " ", "&nbsp;" }}{% unless cosupervisor == degreedata.cosupervisors | split:"," | last %}{{ ", " }}{% else %}){% endunless %}
-	        {% endif %}
-	      {% endfor %}
-            {% endif %}
-            <!-- end cosupervisors -->
-	    </h6>	  
-	  </div>
-	</div>
-      </li>	
+          <div class="{{ rightcolclass }}">
+            <h6 class="" style="font-size: 0.95rem;">
+              {% if degreedata contains 'thesis_url' and degreedata.thesis_url != '' %}
+                <a href="{{ degreedata.thesis_url }}">{{ degreedata.thesis }}</a>
+              {% else %}
+                {{ degreedata.thesis }}
+              {% endif %}
+              <!-- cosupervisors -->
+              {% if degreedata contains 'cosupervisors' and degreedata.cosupervisors != '' %}
+                {{ ' (co&#8209;supervisor' -}}
+                {%- if degreedata.cosupervisors contains ',' %}s{% endif -%}
+                {{- ':' }}
+                {% assign cosupervisors = degreedata.cosupervisors | split: ',' %}
+                {% for cosupervisor in cosupervisors %}
+                  {% assign coauthor_url = null %}
+                  {% assign cosupervisor_first_name = cosupervisor | split: ' ' | first %}
+                  {% assign cosupervisor_last_name = cosupervisor | split: ' ' | last %}
+                  {% if site.data.coauthors[cosupervisor_last_name] %}
+                    {% for coauthor in site.data.coauthors[cosupervisor_last_name] %}
+                      {% if coauthor.firstname contains cosupervisor_first_name %}
+                        {% assign coauthor_url = coauthor.url %}
+                        {% break %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                  {% if coauthor_url %}
+                    <a href="{{ coauthor_url }}">{{ cosupervisor | replace: ' ', '&nbsp;' }}</a>
+                    {%- unless forloop.last %}{{ ', ' }}{% else %}){% endunless %}
+                  {% else %}
+                    {{ cosupervisor | replace: ' ', '&nbsp;' -}}
+                    {%- unless cosupervisor == degreedata.cosupervisors | split:"," | last %}{{ ', ' }}{% else %}){% endunless %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              <!-- end cosupervisors -->
+            </h6>
+          </div>
+        </div>
+      </li>
     {% endfor %}
   {% endif %}
 </ul>

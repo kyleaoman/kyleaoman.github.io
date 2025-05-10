@@ -1,56 +1,54 @@
 ---
 layout: default
 ---
+
 <!-- _layouts/group.html -->
 <div class="post">
-
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }} {% if page.cv_pdf %}<a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>{% endif %}</h1>
-    {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
+    <h1 class="post-title">
+      {{ page.title }} {% if page.cv_pdf %}<a
+        href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="float-right"
+        ><i class="fas fa-file-pdf"></i></a
+      >{% endif %}
+    </h1>
+    {% if page.description %}
+    <p class="post-description">{{ page.description }}</p>
+    {% endif %}
   </header>
 
   <article>
     <div class="cv">
       <h2>Current members</h2>
-      {% for member in site.data.group.members %}
-        {% assign membername = member[0] %}
-        {% assign memberdata = member[1] %}
-        {% if memberdata.status != "present" %}
-          {% continue %}
+      {% for member in site.data.group.members %} {% assign membername = member[0] %} {% assign memberdata = member[1] %} {% if memberdata.status !=
+      "present" %} {% continue %} {% endif %}
+      <a class="anchor" id="{{ membername }}"></a>
+      <div class="card mt-3 p-3">
+        {% if memberdata contains "url" and memberdata.url != "" %}
+        <h3 class="card-title font-weight-medium"><a href="{{ memberdata.url }}">{{ membername }}</a></h3>
+        {% else %}
+        <h3 class="card-title font-weight-medium">{{ membername }}</h3>
         {% endif %}
-        <a class="anchor" id="{{ membername }}"></a>
-        <div class="card mt-3 p-3">
-	  {% if memberdata contains "url" and memberdata.url != "" %}
-            <h3 class="card-title font-weight-medium"><a href="{{ memberdata.url }}">{{ membername }}</a></h3>
-	  {% else %}
-            <h3 class="card-title font-weight-medium">{{ membername }}</h3>
-	  {% endif %}
-          <div>
-            {% include group/groupmember.html %}
-          </div>
-        </div>
+        <div>{% include group/groupmember.html %}</div>
+      </div>
       {% endfor %}
 
       <p></p>
-	    
+
       <h2>Past members</h2>
-      {% for member in site.data.group.members %}
-        {% assign membername = member[0] %}
-        {% assign memberdata = member[1] %}
-        {% if memberdata.status != "past" %}
-          {% continue %}
+      {% for member in site.data.group.members %} {% assign membername = member[0] %} {% assign memberdata = member[1] %} {% if memberdata.status !=
+      "past" %} {% continue %} {% endif %}
+      <a class="anchor" id="{{ membername }}"></a>
+      <div class="card mt-3 p-3">
+        {% if memberdata contains "url" and memberdata.url != "" %}
+        <h3 class="card-title font-weight-medium"><a href="{{ memberdata.url }}">{{ membername }}</a></h3>
+        {% else %}
+        <h3 class="card-title font-weight-medium">{{ membername }}</h3>
         {% endif %}
-        <a class="anchor" id="{{ membername }}"></a>
-        <div class="card mt-3 p-3">
-	  {% if memberdata contains "url" and memberdata.url != "" %}
-            <h3 class="card-title font-weight-medium"><a href="{{ memberdata.url }}">{{ membername }}</a></h3>
-	  {% else %}
-            <h3 class="card-title font-weight-medium">{{ membername }}</h3>
-	  {% endif %}
-          <div>
-            {% include group/groupmember.html %}
-          </div>
-        </div>
+        <div>{% include group/groupmember.html %}</div>
+      </div>
       {% endfor %}
     </div>
   </article>

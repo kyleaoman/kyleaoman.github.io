@@ -13,10 +13,10 @@ Past simulations projects that I've been involved with have had at best fairly r
 
 I've built another layer on top of this called [swiftgalaxy](https://github.com/SWIFTSIM/swiftgalaxy). Given a halo catalogue, this is a tool that understands how to retrieve the particles corresponding to a given galaxy in a simulation. It then streamlines analysis with:
 
- - easy coordinate transformations (e.g. recentre on the centre of the galaxy, rotate the disc into the x-y plane);
- - a coordinate system enforced to be consistent across particle types (avoids accidentally rotating the stars and forgetting to rotate the dark matter);
- - masking that applies to all particle arrays (even those loaded in the future!);
- - all of the swiftsimio features (metadata, units, lazy-loading, etc.).
+- easy coordinate transformations (e.g. recentre on the centre of the galaxy, rotate the disc into the x-y plane);
+- a coordinate system enforced to be consistent across particle types (avoids accidentally rotating the stars and forgetting to rotate the dark matter);
+- masking that applies to all particle arrays (even those loaded in the future!);
+- all of the swiftsimio features (metadata, units, lazy-loading, etc.).
 
 Check out the code on [github](https://github.com/SWIFTSIM/swiftgalaxy) and [readthedocs](https://swiftgalaxy.readthedocs.io/en/latest) or install with `pip install swiftgalaxy`.
 

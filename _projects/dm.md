@@ -29,10 +29,10 @@ One way to measure the dark matter content and distribution in a galaxy is with 
 
 In realistic galaxies there are some complications:
 
- - the gravitational potential is probably not spherically symmetric (but if the mass budget is dominated by dark matter it might be a reasonable approximation);
- - the "tracer" particles are probably not all on circular orbits;
- - with the exception of the Milky Way and galaxies in its immediate vicinity, we only measure angular positions and velocities along the line of sight, so we have incomplete information;
- - gravity may not be the only force acting.
+- the gravitational potential is probably not spherically symmetric (but if the mass budget is dominated by dark matter it might be a reasonable approximation);
+- the "tracer" particles are probably not all on circular orbits;
+- with the exception of the Milky Way and galaxies in its immediate vicinity, we only measure angular positions and velocities along the line of sight, so we have incomplete information;
+- gravity may not be the only force acting.
 
 Nevertheless, in some cases these complications can be modelled or neglected and the general approach still works.
 
@@ -54,10 +54,10 @@ The 'diversity' from the title of the paper refers to the vertical scatter for g
 
 Another point that we {% cite 2015MNRAS.452.3650O %} emphasized is that there are a limited number of ways that the diversity in low-mass galaxy rotation curve shapes can be explained. The comprehensive list has only 4 items:
 
- - Dark matter could be re-distributed away from a cuspy distribution by the physics of normal matter, such as by the gravitational influence of [gas flows driven by repeated cycles of gas cooling and supernova-driven winds](https://doi.org/10.1111/j.1365-2966.2012.20571.x).
- - Dark matter could be re-distributed away from a cuspy distribution by the physics of dark matter, such as by [a collisional interaction between pairs of dark matter particles](https://doi.org/10.1103/PhysRevLett.84.3760).
- - Our interpretation of the measurements may be incorrect because we have assumed the wrong gravitational force law (i.e. we could consider alternatives such as [modified Newtonian dynamics](https://doi.org/10.1086/161131)).
- - Our interpretation of the measurements may be incorrect because we have made flawed assumptions in modelling the data.
+- Dark matter could be re-distributed away from a cuspy distribution by the physics of normal matter, such as by the gravitational influence of [gas flows driven by repeated cycles of gas cooling and supernova-driven winds](https://doi.org/10.1111/j.1365-2966.2012.20571.x).
+- Dark matter could be re-distributed away from a cuspy distribution by the physics of dark matter, such as by [a collisional interaction between pairs of dark matter particles](https://doi.org/10.1103/PhysRevLett.84.3760).
+- Our interpretation of the measurements may be incorrect because we have assumed the wrong gravitational force law (i.e. we could consider alternatives such as [modified Newtonian dynamics](https://doi.org/10.1086/161131)).
+- Our interpretation of the measurements may be incorrect because we have made flawed assumptions in modelling the data.
 
 Much of my work since has been focused on the last point as a possible explanation. I am at this point convinced that there are systematic errors in the modelling and interpretation of the rotation of low-mass galaxies at a level that cannot be ignored. That these would be enough to completely resolve the cusp-core debate by making every galaxy consistent with hosting a dark matter cusp if they were corrected, however, seems like a stretch. My view is therefore that we need to clean up the modelling to know what we should be aiming for more broadly with galaxy formation models (like: how much do we need stellar feedback to reshape the dark matter distribution in galaxies?).
 
