@@ -16,10 +16,15 @@
   {% assign leftcolclass="col-sm-3" %}
   {% assign rightcolclass="col-sm-9" %}  
 {% endif %}
+{% if memberdata.img and memberdata.img != "" %}
+  {% assign imglayout = "col-4 col-sm-4" %}
+{% else %}
+  {% assign imglayout = "col-4 col-sm-3" %}
+{% endif %}
 <ul class="card-text font-weight-light list-group list-group-flush">
   <li class="list-group-item">
     <div class="row">
-      <div class={% if memberdata.img and memberdata.img != "" %}"col-4 col-sm-4"{% else %}"col-4 col-sm-3"{% endif %}>
+      <div class="{{ imglayout }}">
 	{% if memberdata.startdate %}
 	{% assign startdate = memberdata.startdate | split: "-" | join: "." %}
 	{% else %}
@@ -34,7 +39,7 @@
           {{ startdate }}{% if enddate != "" %}-{{ enddate }}{% endif %}
 	</span>
       </div>
-      <div class={% if memberdata.img and memberdata.img != "" %}"col-8 col-sm-8"{% else %}"col-8 col-sm-9"{% endif %}>
+      <div class="{{ imglayout }}">
 	<h6 class="" style="font-size: 0.95rem;">
 	{% if memberdata contains "role_url" and memberdata.role_url != "" %}
 	  <a href="{{ memberdata.role_url }}">{{ memberdata.role }}</a>
