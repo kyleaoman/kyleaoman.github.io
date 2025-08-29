@@ -243,6 +243,8 @@
           {%- capture entrytype -%}{{ "A&A" }}{%- endcapture -%}
         {%- elsif entry.journal == '\jcap' -%}
           {%- capture entrytype -%}{{ "JCAP" }}{%- endcapture -%}
+        {%- elsif entry.journal == '\pasa' -%}
+          {%- capture entrytype -%}{{ "PASA" }}{%- endcapture -%}
         {%- else -%}
           {%- capture entrytype -%}{{entry.journal}}{%- endcapture -%}
         {%- endif -%}
