@@ -1,0 +1,12 @@
+add https://calendar.google.com to urls
+remove nonces
+define:
+const now = new Date(Date.now());const msnow = now.getTime().toString();const yearnow = now.getFullYear().toString();const datenow = yearnow + (now.getMonth() + 1).toString().padStart(2, '0') + now.getDate().toString().padStart(2, '0');
+substitute msnow, yearnow, datenow
+substitute colours:
+[11864492],"kyleaoman@gmail.com"
+[16711680],"Absence from office"
+[2529466],"Astronomy Activities Durham"
+[2529466],"Astronomy Seminars Durham"
+[11864492],"Calendar"
+[2529466],"Durham Friday Lunch Astronomy Talk"
