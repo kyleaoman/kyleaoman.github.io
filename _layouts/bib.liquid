@@ -245,6 +245,8 @@
           {%- capture entrytype -%}{{ "JCAP" }}{%- endcapture -%}
         {%- elsif entry.journal == '\pasa' -%}
           {%- capture entrytype -%}{{ "PASA" }}{%- endcapture -%}
+        {%- elsif entry.journal == '\aj' -%}
+          {%- capture entrytype -%}{{ "AJ" }}{%- endcapture -%}
         {%- else -%}
           {%- capture entrytype -%}{{entry.journal}}{%- endcapture -%}
         {%- endif -%}
