@@ -25,7 +25,7 @@ cv:
 
       - institution: University of Waterloo
         location: Waterloo, Canada
-	url: https://www.uwaterloo.ca
+        url: https://www.uwaterloo.ca
         area: Physics & Astronomy
         studyType: MSc
         start_date: 2011
@@ -33,7 +33,7 @@ cv:
 
       - institution: University of Waterloo
         location: Waterloo, Canada
-	url: https://www.uwaterloo.ca
+        url: https://www.uwaterloo.ca
         area: Physics
         studyType: BSc (Hons)
         start_date: 2007
@@ -78,31 +78,31 @@ cv:
           - "Durham University"
         date: 2022
         awarder: Durham University
-	url: https://www.durham.ac.uk/departments/academic/physics/news/news-physics-department-development-talent-scheme-awards-four-early-career-researchers/
+        url: https://www.durham.ac.uk/departments/academic/physics/news/news-physics-department-development-talent-scheme-awards-four-early-career-researchers/
         summary: The Physics Department Developing Talent Award promotes, enhances and encourages the possibility of early career researchers developing their research careers.
-	
+
       - title: RM Petrie Memorial Fellowship
         authors:
           - "University of Victoria"
         date: 2016-2017
         awarder: University of Victoria
-	url: https://www.uvic.ca/graduatestudies/finances/search-funding/award-pages/the-r-m-petrie-memorial-fwllowship.php
+        url: https://www.uvic.ca/graduatestudies/finances/search-funding/award-pages/the-r-m-petrie-memorial-fwllowship.php
         summary: Awarded annually to one or two highly qualified students who wish to work toward the MSc or PhD degree in astronomy at the University of Victoria.
-	
+
       - title: Canada Gradual Scholarship (Doctoral)
         authors:
           - "National Sciences and Engineering Research Council"
         date: 2015-2016
         awarder: National Sciences and Engineering Research Council
-	url: https://nserc-crsng.canada.ca/en/funding-opportunity/canada-graduate-research-scholarship-doctoral-program
+        url: https://nserc-crsng.canada.ca/en/funding-opportunity/canada-graduate-research-scholarship-doctoral-program
         summary: Recognizes and supports the next generation of outstanding innovators, knowledge workers, creative thinkers and researchers.
-	
+
       - title: Nora & Mark DeGoutière Memorial Scholarship
         authors:
           - "University of Victoria"
         date: 2014
         awarder: University of Victoria
-	url: https://www.uvic.ca/graduatestudies/finances/search-funding/award-pages/nora-and-mark-de-goutiere-memorial-scholarship.php
+        url: https://www.uvic.ca/graduatestudies/finances/search-funding/award-pages/nora-and-mark-de-goutiere-memorial-scholarship.php
         summary: Two scholarships are awarded to outstanding graduate students in the Department of Physics and Astronomy.
 
       - title: Queen Elizabeth II Graduate Scholarship in Science & Technology
@@ -110,7 +110,7 @@ cv:
           - "Ontario Student Assistance Programme"
         date: 2012
         awarder: Ontario Student Assistance Programme
-	url: https://osap.gov.on.ca/OSAPPortal/en/A-ZListofAid/PRDR019236.html
+        url: https://osap.gov.on.ca/OSAPPortal/en/A-ZListofAid/PRDR019236.html
         summary: A merit-based award for master’s and doctoral students.
 
     Languages:

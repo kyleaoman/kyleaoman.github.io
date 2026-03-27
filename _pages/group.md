@@ -4,6 +4,6 @@ title: group
 permalink: /group/
 description: members past & present
 nav: true
-nav_order: 3
+nav_order: 4
 images_circular: true
 ---

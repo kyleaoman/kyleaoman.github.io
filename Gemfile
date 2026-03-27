@@ -39,10 +39,3 @@ group :other_plugins do
     # gem 'unicode_utils' -- should be already installed by jekyll
     # gem 'webrick' -- should be already installed by jekyll
 end
-
-gem "logger", "~> 1.6"
-
-gem "csv", "~> 3.3"
-gem "ostruct", "~> 0.6.0"
-gem "base64", "~> 0.2.0"
-gem "observer", "~> 0.1.2"

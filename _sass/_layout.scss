@@ -33,6 +33,31 @@ body.sticky-bottom-footer {
   max-width: v.$max-content-width;
 }
 
+// Memberphoto
+
+.memberphotoregion {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .memberphotoregion {
+    float: right;
+    width: 22%;
+    margin-left: 1rem;
+  }
+}
+
+.memberpic {
+  width: 35%;
+  margin: auto;
+  display: block;
+}
+@media (min-width: 576px) {
+  .memberpic {
+    width: 100%;
+  }
+}
+
 // Profile
 .profile {
   img {
