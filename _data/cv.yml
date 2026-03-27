@@ -1,69 +1,121 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Kyle Oman
-    - name: Date of Birth
-      value: 5th January 1989
-    - name: Languages
-      value: English (native speaker), French (native speaker), Dutch (basic)
+cv:
+  name: Kyle Oman
+  label: Astrophysicist
+  email: kyle.a.oman@durham.ac.uk
+  location: Durham, UK
+  image: ""
+  summary: Associate Professor & Dorothy Hodgkin Research Fellow
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: University of Victoria
-      year: 2017
-      description:
-        - Physics & Astronomy
-    - title: MSc
-      institution: University of Waterloo
-      year: 2013
-      description:
-        - Physics & Astronomy
-    - title: BSc
-      institution: University of Waterloo
-      year: 2011
-      description:
-        - Physics
+  address:
+    street: Ogden Centre for Fundamental Physics (West), South Rd.
+    city: Durham
+    region: County Durham
+    postalCode: DH1 3LE
+    countryCode: UK
 
-- title: Experience
-  type: time_table
-  contents:
-    - title: Assoc. Professor & Royal Society Dorothy Hodgkin Fellow
-      institution: Institute for Computational Cosmology & Centre for Extragalactic Astronomy, Physics, Durham University
-      year: 2023 - present
+  sections:
+    Education:
+      - institution: University of Victoria
+        location: Victoria, Canada
+        url: https://www.uvic.ca
+        area: Physics & Astronomy
+        studyType: PhD
+        start_date: 2013
+        end_date: 2017
 
-    - title: Asst. Professor & Royal Society Dorothy Hodgkin Fellow
-      institution: Institute for Computational Cosmology & Centre for Extragalactic Astronomy, Physics, Durham University
-      year: 2023 - present
+      - institution: University of Waterloo
+        location: Waterloo, Canada
+	url: https://www.uwaterloo.ca
+        area: Physics & Astronomy
+        studyType: MSc
+        start_date: 2011
+        end_date: 2013
 
-    - title: Postdoctoral Research Associate
-      institution: Institute for Computational Cosmology, Physics, Durham University
-      year: 2019 - 2023
+      - institution: University of Waterloo
+        location: Waterloo, Canada
+	url: https://www.uwaterloo.ca
+        area: Physics
+        studyType: BSc (Hons)
+        start_date: 2007
+        end_date: 2011
 
-    - title: Postdoctoral Researcher
-      institution: Kapteyn Astronomical Institute, Rijksuniversiteit Groningen
-      year: 2017-2019
+    Experience:
+      - company: Durham University
+        position: Assoc. Professor & Royal Society Dorothy Hodgkin Fellow
+        location: Durham, UK
+        start_date: 2024
+        end_date: present
 
-- title: Awards & Scholarships
-  type: time_table
-  contents:
-    - year: 2023 - 2031
-      items:
-        - Dorothy Hodgkin Fellowship (The Royal Society)
-    - year: 2022
-      items:
-        - Durham Physics Developing Talent Award (Durham University)
-    - year: 2016 - 2017
-      items:
-        - RM Petrie Memorial Fellowship (University of Victoria)
-    - year: 2015 - 2016
-      items:
-        - Canada Graduate Scholarship (National Science & Engineering Research Council)
-    - year: 2014
-      items:
-        - Nora & Mark DeGoutière Memorial Scholarship (University of Victoria)
-    - year: 2012
-      items:
-        - Queen Elizabeth II Graduate Scholarship in Science & Technology (Ontario Student Assistance Program)
+      - company: Durham University
+        position: Asst. Professor & Royal Society Dorothy Hodgkin Fellow
+        location: Durham, UK
+        start_date: 2023
+        end_date: 2024
+
+      - company: Durham University
+        position: Postdoctoral Research Associate
+        location: Durham, UK
+        start_date: 2019
+        end_date: 2023
+
+      - company: Rijksuniversiteit Groningen
+        position: Postdoctoral Researcher
+        location: Groningen, NL
+        start_date: 2017
+        end_date: 2019
+
+    Awards:
+      - title: Royal Society Dorothy Hodgkin Fellowship
+        authors:
+          - "The Royal Society"
+        date: 2023-2031
+        awarder: The Royal Society
+        url: https://royalsociety.org/news/2023/10/early-career-researchers-funding-2023/
+        summary: The Dorothy Hodgkin Fellowships support outstanding early career scientists who require a flexible working pattern due to personal circumstances.
+
+      - title: Durham Physics Developing Talent Award
+        authors:
+          - "Durham University"
+        date: 2022
+        awarder: Durham University
+	url: https://www.durham.ac.uk/departments/academic/physics/news/news-physics-department-development-talent-scheme-awards-four-early-career-researchers/
+        summary: The Physics Department Developing Talent Award promotes, enhances and encourages the possibility of early career researchers developing their research careers.
+	
+      - title: RM Petrie Memorial Fellowship
+        authors:
+          - "University of Victoria"
+        date: 2016-2017
+        awarder: University of Victoria
+	url: https://www.uvic.ca/graduatestudies/finances/search-funding/award-pages/the-r-m-petrie-memorial-fwllowship.php
+        summary: Awarded annually to one or two highly qualified students who wish to work toward the MSc or PhD degree in astronomy at the University of Victoria.
+	
+      - title: Canada Gradual Scholarship (Doctoral)
+        authors:
+          - "National Sciences and Engineering Research Council"
+        date: 2015-2016
+        awarder: National Sciences and Engineering Research Council
+	url: https://nserc-crsng.canada.ca/en/funding-opportunity/canada-graduate-research-scholarship-doctoral-program
+        summary: Recognizes and supports the next generation of outstanding innovators, knowledge workers, creative thinkers and researchers.
+	
+      - title: Nora & Mark DeGoutière Memorial Scholarship
+        authors:
+          - "University of Victoria"
+        date: 2014
+        awarder: University of Victoria
+	url: https://www.uvic.ca/graduatestudies/finances/search-funding/award-pages/nora-and-mark-de-goutiere-memorial-scholarship.php
+        summary: Two scholarships are awarded to outstanding graduate students in the Department of Physics and Astronomy.
+
+      - title: Queen Elizabeth II Graduate Scholarship in Science & Technology
+        authors:
+          - "Ontario Student Assistance Programme"
+        date: 2012
+        awarder: Ontario Student Assistance Programme
+	url: https://osap.gov.on.ca/OSAPPortal/en/A-ZListofAid/PRDR019236.html
+        summary: A merit-based award for master’s and doctoral students.
+
+    Languages:
+      - name: English
+        summary: "Native speaker"
+
+      - name: French
+        summary: "Native speaker"
